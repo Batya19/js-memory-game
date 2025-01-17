@@ -1,0 +1,17 @@
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#rights {
+    position: fixed;
+    bottom: 0;
+    font-family: cursive;
+    font-size: 15px;
+    color: #ff7eac;
+}

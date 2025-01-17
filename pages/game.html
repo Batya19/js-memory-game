@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="../styles/game.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="icon" href="../images/happy-blij.gif" type="icon.png">
+</head>
+
+<body>
+    <div id="difficulty-popup" class="popup">
+        <div class="popup-content">
+            <h1>Hello, <span id="playerName"></span>!</h1>
+            <h2>Choose difficulty level:</h2>
+            <div id="difficulty-buttons">
+                <button id="easy">Easy</button>
+                <button id="medium">Medium</button>
+                <button id="hard">Hard</button>
+            </div>
+        </div>
+    </div>
+    <div id="game-board"></div>
+
+    <div id="game-container" class="hidden">
+
+        <div id="timer-container">
+            ⏱️ <span id="timer">0</span>
+        </div>
+
+        <div id="celebration"></div>
+
+
+        <div id="matched-pile">
+            <h3>Matched Cards</h3>
+            <div id="matched-cards"></div>
+        </div>
+        <button id="home-button" class="game-button">Home</button>
+
+        <div id="hint-container">
+            <button id="hint-btn">Hints: <span id="hints-remaining">3</span></button>
+        </div>
+
+        <div id="game-info">
+            <div id="matched-pairs-container">
+                Matched pairs: <span id="matched-pairs">0</span>
+            </div>
+            <div>
+                Attempts: <span id="attempts">0</span>
+            </div>
+            <div>
+                Score: <span id="score">0</span>
+            </div>
+        </div>
+        <button id="switchUserBtn">Switch User</button>
+
+    </div>
+
+    <div id="win-popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>🎉 Congratulations! 🎉 You did it! 🏆</h2>
+            <p id="win-message"></p>
+            <p>🏅 Your score is: <span id="win-score"></span></p>
+            <p id="highest-score"></p>
+            <button id="next-level-btn">Next Level</button>
+            <button id="home-btn">Home</button>
+        </div>
+    </div>
+
+    <div id="leave-game-popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Are you sure you want to leave the game?</h2>
+            <button id="confirm-leave">Yes, leave the game</button>
+            <button id="cancel-leave">No, continue playing</button>
+        </div>
+    </div>
+
+    <button id="instructions-btn" class="instructions-btn">❔</button>
+
+    <div id="instructions-popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Game Instructions:</h2>
+            <p>
+                Welcome to the Memory Game! All cards start face down.<br>
+                Select a card to reveal its image and find its matching pair.<br>
+                Keep revealing and matching cards until all are paired.<br>
+                You earn points for each match and bonuses based on how quickly you complete the game.<br>
+            </p>
+            <div id="close-instructions-container">
+                <div id="emoji"></div>
+                <button id="close-instructions-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-back-container">
+        <button id="card-back-button">Choose Card Back</button>
+        <div id="card-back-popup" class="hidden">
+            <div id="card-back-options">
+                <!-- <img id="back1" src="../images/back1.jpg" alt="Back 1">
+                <img id="back2" src="../images/back2.jpg" alt="Back 2">
+                <img id="back3" src="../images/back3.jpg" alt="Back 3">
+                <img id="back4" src="../images/back4.jpg" alt="Back 4">
+                <img id="back5" src="../images/back5.jpg" alt="Back 5">
+                <img id="back6" src="../images/back6.jpg" alt="Back 6">
+                <img id="back7" src="../images/back7.jpg" alt="Back 7">
+                <img id="back8" src="../images/back8.jpg" alt="Back 8"> -->
+                <img id="1" src="../images/1.jpg" alt="Back 1">
+                <img id="2" src="../images/2.jpg" alt="Back 2">
+                <img id="3" src="../images/3.jpg" alt="Back 3">
+                <img id="4" src="../images/4.jpg" alt="Back 4">
+                <img id="5" src="../images/5.jpg" alt="Back 5">
+                <img id="6" src="../images/6.jpg" alt="Back 6">
+                <img id="7" src="../images/7.jpg" alt="Back 7">
+                <img id="8" src="../images/8.jpg" alt="Back 8">
+            </div>
+        </div>
+    </div>
+
+
+    <button id="show-leaderboard-btn">Show Leaderboard</button>
+
+    <div id="leaderboard-popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Leaderboard</h2>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                        <th>Difficulty</th>
+                        <th>Time</th>
+                        <th>Attempts</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body"></tbody>
+            </table>
+            <button id="close-leaderboard-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="hidden"></div>
+
+    <audio id="win-sound" src="../sounds/game-win.mp3"></audio>
+    <audio id="match-sound" src="../sounds/card-match.mp3"></audio>
+    <audio id="mismatch-sound" src="../sounds/card-mismatch.mp3"></audio>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <p id="rights">Copyright 2024 © All rights Reserved. created by Batya Zilberberg</p>
+
+    <script src="../scripts/backgroundConfetti.js"></script>
+    <script src="../scripts/winConfetti.js"></script>
+    <script src="../scripts/game.js"></script>
+</body>
+
+</html>

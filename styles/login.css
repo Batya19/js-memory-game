@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+body {
+    font-family: 'Rubik Moonrocks', sans-serif;
+    text-align: center;
+    background-image: linear-gradient(to right, #ffcccc, #ccffcc, #ccccff);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+ 
+input {
+    padding: 15px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 35vh;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 25px;
+    background-color: #ff49ab;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f97bbe;
+}
+
+h1 {
+    animation: colorChange 3s infinite;
+    font-size: 10vh;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff0000;
+    }
+
+    25% {
+        color: #00ff00;
+    }
+
+    50% {
+        color: #0000ff;
+    }
+
+    75% {
+        color: #ff00ff;
+    }
+
+    100% {
+        color: #ff0000;
+    }
+}
