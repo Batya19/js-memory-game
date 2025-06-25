@@ -3,8 +3,6 @@
 
 [![Play Now](https://img.shields.io/badge/🔗_Try%20Live%20Demo-Click%20Here-green?style=for-the-badge)](https://batya19.github.io/js-memory-game/)
 
-![Preview](./images/screenshot-gameplay.png)
-
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![HTML5](https://img.shields.io/badge/HTML5-Latest-orange?logo=html5)](https://html.spec.whatwg.org/)
 [![CSS3](https://img.shields.io/badge/CSS3-Latest-blue?logo=css3)](https://www.w3.org/Style/CSS/)
@@ -149,13 +147,6 @@ The game automatically adapts to different difficulty levels with optimized card
 - 🧠 **Memory Master** - Complete hard mode without hints
 - 🎯 **Perfect Game** - Complete any mode without mistakes
 - 📈 **Consistency** - Play 5 games in a row
-
-## 📜 Available Scripts
-
-```bash
-# No build process required!
-# Simply double-click index.html to start playing
-```
 
 ## 🌐 Browser Support
 - ✅ Chrome 80+
